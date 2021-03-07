@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^17.0.0",
+    "react-advanced-form": "^1.7.2",
     "react-dom": "^17.0.0"
   },
   "scripts": {

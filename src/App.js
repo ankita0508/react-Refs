@@ -29,8 +29,8 @@ export default function App() {
   };
 
   const submitFormHandler = e => {
-    console.log(e);
     e.preventDefault();
+    console.log(JSON.stringify(e.target.innerHTML));
   };
 
   return (
