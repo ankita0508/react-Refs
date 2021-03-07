@@ -28,15 +28,13 @@ export default function App() {
     }
   };
 
-  const submitFormHandler = () => {
-    console.log(firstName.value);
-    console.log(lastName.value);
-    console.log(age.value);
-    console.log(btnSubmit.value);
+  const submitFormHandler = e => {
+    console.log(e);
+    e.preventDefault();
   };
 
   return (
-    <div>
+    <form onSubmit={submitFormHandler}>
       First Name:
       <input
         type="text"
@@ -64,10 +62,9 @@ export default function App() {
         type="submit"
         value="submit"
         ref={input => (btnSubmit = input)}
-        onClick={submitFormHandler}
         onKeyUp={e => focusNextItemHandler(e, "submit")}
       />
       <br />
-    </div>
+    </form>
   );
 }
